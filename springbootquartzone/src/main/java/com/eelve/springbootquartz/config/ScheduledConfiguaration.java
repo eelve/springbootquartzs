@@ -5,12 +5,10 @@ import com.eelve.springbootquartz.service.QuartzService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
-import java.util.Map;
+
 
 
 /**
@@ -41,6 +39,13 @@ public class ScheduledConfiguaration implements CommandLineRunner {
         map.put("name",3);
         quartzService.deleteJob("job3", "test2");
         quartzService.addJob(Job.class, "job3", "test2", "15 * * * * ?", map);
+
+        map.put("name",13);
+        quartzService.deleteJob("job4", "test2");
+        quartzService.addJob(Job.class, "job4", "test2", "15 * * * * ?", map);
+        map.put("name",14);
+        quartzService.deleteJob("job5", "test2");
+        quartzService.addJob(Job.class, "job5", "test2", "15 * * * * ?", map);
 
     }
 }

@@ -18,7 +18,7 @@ import java.util.HashMap;
  * @Date 2019/8/1 10:40
  * @Version 1.0
  **/
-@Component
+//@Component
 @Slf4j
 public class ScheduledConfiguaration implements CommandLineRunner {
 

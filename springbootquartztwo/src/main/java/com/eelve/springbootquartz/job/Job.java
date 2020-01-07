@@ -8,6 +8,7 @@ import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 import java.util.Date;
+import java.util.concurrent.Future;
 
 /**
  * @ClassName Job
@@ -24,5 +25,18 @@ public class Job extends QuartzJobBean {
         JobDataMap jobDataMap = jobExecutionContext.getJobDetail().getJobDataMap();
         // 业务逻辑 ...
         log.info("------springbootquartztwojob执行"+jobDataMap.get("name").toString()+"###############"+jobExecutionContext.getTrigger());
+        //任务开始时间
+        long startTime = System.currentTimeMillis();
+        try {
+            //任务执行总时长
+            long times = System.currentTimeMillis() - startTime;
+            log.info("任务执行完毕，任务ID：" + jobExecutionContext.getJobDetail() + "  总共耗时：" + times + "毫秒");
+        } catch (Exception e) {
+            long times = System.currentTimeMillis() - startTime;
+            log.error("任务执行失败，任务ID：" + jobExecutionContext.getJobDetail()+ "  总共耗时：" + times + "毫秒", e);
+
+        } finally {
+
+        }
     }
 }

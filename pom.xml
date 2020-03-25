@@ -15,6 +15,7 @@
     <modules>
         <module>springbootquartzone</module>
         <module>springbootquartztwo</module>
+        <module>springbootquartzthree</module>
     </modules>
 
     <parent>

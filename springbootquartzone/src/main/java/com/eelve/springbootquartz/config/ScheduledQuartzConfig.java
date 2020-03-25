@@ -4,7 +4,6 @@ import com.eelve.springbootquartz.job.Job;
 import com.eelve.springbootquartz.service.QuartzService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
 
@@ -15,7 +14,7 @@ import java.util.HashMap;
  * @Date 2019/8/2 16:53
  * @Version 1.0
  **/
-@Configuration
+//@Configuration
 public class ScheduledQuartzConfig {
 
     @Autowired

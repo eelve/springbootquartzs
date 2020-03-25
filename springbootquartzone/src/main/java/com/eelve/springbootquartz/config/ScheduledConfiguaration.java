@@ -18,7 +18,7 @@ import java.util.HashMap;
  * @Date 2019/8/1 10:40
  * @Version 1.0
  **/
-//@Component
+@Component
 @Slf4j
 public class ScheduledConfiguaration implements CommandLineRunner {
 
@@ -29,23 +29,23 @@ public class ScheduledConfiguaration implements CommandLineRunner {
     public void run(String... args) throws Exception {
         HashMap<String,Object> map = new HashMap<>();
         map.put("name",1);
-        quartzService.deleteJob("job", "test");
-        quartzService.addJob(Job.class, "job", "test", "0 * * * * ?", map);
+        quartzService.deleteJob("job", "Job");
+        quartzService.addJob(Job.class, "job", "Job", "0 * * * * ?", map);
 
         map.put("name",2);
-        quartzService.deleteJob("job2", "test");
-        quartzService.addJob(Job.class, "job2", "test", "10 * * * * ?", map);
+        quartzService.deleteJob("job2", "Job");
+        quartzService.addJob(Job.class, "job2", "Job", "10 * * * * ?", map);
 
         map.put("name",3);
-        quartzService.deleteJob("job3", "test2");
-        quartzService.addJob(Job.class, "job3", "test2", "15 * * * * ?", map);
+        quartzService.deleteJob("job3", "Job");
+        quartzService.addJob(Job.class, "job3", "Job", "15 * * * * ?", map);
 
         map.put("name",13);
-        quartzService.deleteJob("job4", "test2");
-        quartzService.addJob(Job.class, "job4", "test2", "15 * * * * ?", map);
+        quartzService.deleteJob("job4", "Job");
+        quartzService.addJob(Job.class, "job4", "Job", "15 * * * * ?", map);
         map.put("name",14);
-        quartzService.deleteJob("job5", "test2");
-        quartzService.addJob(Job.class, "job5", "test2", "15 * * * * ?", map);
+        quartzService.deleteJob("job5", "Job");
+        quartzService.addJob(Job.class, "job5", "Job", "15 * * * * ?", map);
 
     }
 }

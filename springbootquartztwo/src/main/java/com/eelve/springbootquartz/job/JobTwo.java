@@ -18,7 +18,7 @@ import java.util.concurrent.Future;
  * @Version 1.0
  **/
 @Slf4j
-public class Job extends QuartzJobBean {
+public class JobTwo extends QuartzJobBean {
     @Override
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         // 获取参数

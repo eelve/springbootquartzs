@@ -6,6 +6,9 @@
 
 ![调用结果展示](./images/result.png)
 
+# License
+Released under the [MIT](LICENSE) License.
+
 ---
 
 [详细的过程可以参考我写的这篇文章](https://eelve.com/archives/springbootstarterquartzs)

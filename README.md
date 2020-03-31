@@ -4,7 +4,7 @@
 * [常用数据库脚本](./dbTables),quartz版本为2.2.3,可以选择对应的sql脚本执行，用作存储定时任务数据
 * 示例中为了初始化任务，使用了CommandLineRunner初始化了5个任务，可以直接运行两个任务，观察定时任务效果。也可以杀掉其中某个服务，观察任务执行情况
 
-![调用结果展示](images/result.png)
+![调用结果展示](https://github.com/eelve/springbootquartzs/raw/master/images/result.png)
 
 ---
 
